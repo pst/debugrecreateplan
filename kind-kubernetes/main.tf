@@ -30,4 +30,6 @@ resource "kubernetes_namespace" "current" {
   metadata {
     name = "debug"
   }
+
+  depends_on = [kind_cluster.current]
 }
